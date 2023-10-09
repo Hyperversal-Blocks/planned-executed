@@ -22,16 +22,32 @@ const ToggleMenu = () => {
         </span>
       </button>
     </div>
-
+    
     <h3>Menu</h3>
     <div class="menu">
-      <router-link class="button" to="/overview">
+      <router-link class="button" to="/">
         <span class="material-icons">home</span>
-        <span class="text">Overview</span>
+        <span class="text">Home</span>
       </router-link>
-      <router-link class="button" to="/company">
+      <router-link class="button" to="/about">
         <span class="material-icons">visibility</span>
-        <span class="text">Company</span>
+        <span class="text">About</span>
+      </router-link>
+      <router-link class="button" to="/team">
+        <span class="material-icons">group</span>
+        <span class="text">Team</span>
+      </router-link>
+      <router-link class="button" to="/contact">
+        <span class="material-icons">email</span>
+        <span class="text">Contact</span>
+      </router-link>
+    </div>
+
+    <div class="flex"></div>
+    <div class="menu">
+      <router-link class="button" to="/settings">
+        <span class="material-icons">settings</span>
+        <span class="text">Settings</span>
       </router-link>
     </div>
   </aside>
@@ -46,7 +62,7 @@ aside {
   min-height: 100vh;
   padding: 1rem;
 
-  background-color: var(--less-dark);
+  background-color: var(--dark);
   color: var(--light);
 
   transition: 0.2s ease-out;
@@ -100,7 +116,6 @@ aside {
 
   .menu {
     margin: 0 -1rem;
-
     .button {
       display: flex;
       align-items: center;
@@ -135,11 +150,10 @@ aside {
   }
 
   &.is-expanded {
-    width: var(--sidebar-width);
+    width: var(--navbar-width);
 
     .menu-toggle-wrap {
       top: -3rem;
-
       .menu-toggle {
         transform: rotate(-180deg);
       }
@@ -157,7 +171,7 @@ aside {
   }
 
   .flex {
-    flex: 1 1 0;
+   flex: 1 1 0;
   }
 
   @media (max-width: 768px) {

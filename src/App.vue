@@ -1,11 +1,13 @@
 
 <script setup>
 import Sidebar from './components/Sidebar.vue'
+import Navbar from "@/components/Navbar.vue";
 
 </script>
 
 <template>
   <div class="app">
+    <Navbar/>
     <Sidebar/>
     <router-view/>
   </div>
@@ -18,8 +20,10 @@ import Sidebar from './components/Sidebar.vue'
   --grey: #64748b;
   --dark: #1e293b;
   --dark-alt: #334155;
+  --less-dark: #40435C;
   --light: #f1f5f9;
   --sidebar-width: 300px;
+  --navbar-width:150px
 }
 
 * {
